@@ -2,6 +2,8 @@
 #include <string.h>
 #include <locale.h>
 
+/*Faça um algoritmos que lê uma matriz M5x5 e mostrar os valores digitados para a matriz M.*/
+
 void main(){
     int Matriz[5][5];
 

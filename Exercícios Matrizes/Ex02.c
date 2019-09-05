@@ -2,6 +2,8 @@
 #include <string.h>
 #include <locale.h>
 
+/*Faça um algoritmos que lê uma matriz M5x5 e a matriz deve ser preenchida através das colunas, por exemplo se for digitado 1,2,3,4,5,6,7,8,9,10,...
+Após mostre a matriz resultante.*/
 void main(){
     int Matriz[5][5];
 
