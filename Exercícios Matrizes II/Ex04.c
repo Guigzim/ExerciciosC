@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 /*Faça um algoritmo que lê valores para uma matriz M4X4 e um valor
 para a variável “a” (do tipo simples).
 Multiplicar cada valor contido na matriz pelo valor da variável e
