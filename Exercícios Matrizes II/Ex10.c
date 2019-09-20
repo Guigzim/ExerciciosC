@@ -2,23 +2,27 @@
 #include <stdlib.h>
 
 void main(){
-    int A[5][5], B[5][5], R[5][5];
-    RDMpreencheMatriz(A,5,5,100);
-    srand(3);
-    RDMpreencheMatriz(B,5,5,50);
-    printf("##### MATRIZ A #####\n");
-    imprimeMatriz(A,5,5);
-
-    printf("\n##### MATRIZ B #####\n");
-    imprimeMatriz(B,5,5);
-
+    int M[5][5], V[5];
+    RDMpreencheMatriz(M, 5,5,10);
+    for(int i = 0; i < 5; i++){
+        printf("Digite um valor para V[%d]: ", i);
+        scanf("%d", &V[i]);
+    }
+    printf("\n##### IMPRIME MATRIZ #####\n");
+    imprimeMatriz(M,5,5);
+    printf("\n##### IMPRIME VETOR #####\n");
+    printf("V = [ ");
+    for(int i = 0; i < 5; i++){
+        printf("%d ", V[i]);
+    }
+    printf("]\n");
     for(int l = 0; l < 5; l++){
         for(int c = 0; c < 5; c++){
-            R[l][c] = A[l][c] - B[l][c];
+            M[l][c] = V[l] * M[l][c];
         }
     }
-    printf("\n##### MATRIZ RESULTADO #####\n");
-    imprimeMatriz(R,5,5);
+    printf("\n##### IMPRIME MATRIZ MULTIPLICADA #####\n");
+    imprimeMatriz(M,5,5);
 
 }
 /*Imprime uma matriz.
