@@ -7,9 +7,10 @@ void troca_valores();
 void soma_valores();
 void subtrai_valores();
 int multiplica_valores(int x, int y);
+bool isPositive(int x);
 
 void main(){
-    printf("Digite a questão que deseja executar: ");
+    printf("Digite a questao que deseja executar: ");
     int questao;
     scanf("%d", &questao);
     switch (questao)
@@ -34,6 +35,15 @@ void main(){
         recebe_valores();
         z = multiplica_valores(x,y);
         printf("Valor da multiplicacao e: %d", z);
+    break;
+    case 5:
+    printf("Digite um valor para X: ");
+    scanf("%d", &x);
+    if(isPositive(x)){
+        printf("O valor eh positivo!");
+    }else{
+        printf("O valor eh negativo!");
+    }
     break;
     default:
         printf("Voce nao selecionou porra de questao alguma");
@@ -60,4 +70,12 @@ void subtrai_valores(){
 }
 int multiplica_valores(int x, int y){
     return x * y;
+}
+bool isPositive(int x){
+    if(x >= 0){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
