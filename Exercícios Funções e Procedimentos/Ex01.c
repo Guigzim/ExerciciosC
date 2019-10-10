@@ -1,18 +1,22 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+bool isPerfeito(int num);
+int fatorial(int num);
+
+
 void main(){
     printf("Digite um numero: ");
     int num;
     scanf("%d", &num);
-    if(isPerfeito(num))
+    if(isPerfeito(num)){
         printf("O numero digitado eh perfeito!\n");
-    else
+    }
+    else{
         printf("O numero digitado nao eh perfeito!\n");
+    }
         
     printf("O fatorial do numero digitado eh: %d", fatorial(6));
-
-
 }
 
 bool isPerfeito(int num){
@@ -27,6 +31,7 @@ bool isPerfeito(int num){
     else
         return false;
 }
+
 int fatorial(int num){
     int fat = 1;
     for(int i = 1; i <= num; i++){
