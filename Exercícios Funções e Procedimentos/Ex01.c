@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+bool isPerfeito(int num);
+int fatorial(int num);
+
+
 void main(){
-    printf("Digite um numero: ");
+    /* printf("Digite um numero: ");
     int num;
     scanf("%d", &num);
     if(isPerfeito(num))
@@ -11,7 +15,9 @@ void main(){
         printf("O numero digitado nao eh perfeito!\n");
         
     printf("O fatorial do numero digitado eh: %d", fatorial(6));
-
+ */
+    int teste_fat = fatorial_recursiva(5);
+    printf("o resultado foi: %d", teste_fat);
 
 }
 
@@ -33,4 +39,11 @@ int fatorial(int num){
         fat = fat * i;
     }
     return fat;
+}
+int fatorial_recursiva(int num){
+    if(num > 1){
+        return num * fatorial_recursiva(num-1);
+    }else{
+        return num;
+    }
 }

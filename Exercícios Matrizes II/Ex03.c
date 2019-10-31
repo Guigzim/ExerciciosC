@@ -19,6 +19,7 @@ void main(){
         aux[i] = M[2][i];
         M[2][i] = M[8][i];
         M[8][i] = aux[i];
+        
         aux[i] = M[5][i];
         M[5][i] = M[9][i];
         M[9][i] = aux[i];
